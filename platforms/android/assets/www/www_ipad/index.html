@@ -1,0 +1,3569 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        
+        	
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>What The truck</title>
+    </head>
+    
+    
+    
+    <body>
+    	
+        <div data-role="page" id="home">
+        	<section class="pageContent ui-panel-wrapper">
+				<div data-role="content">
+					<div class="home-content">
+						<a href="#menuPanel" class="home-link"><img src="img/truck-logo.png" alt="" /></a>
+						<hr />
+						<h1>Find a Food Truck NEAR YOU</h1>
+						<form role="form" class="home-search-box">
+							<div class="form-custom">
+								<div class="enter-your-address">
+									<input type="text" placeholder="Enter your address" id="whereYou" data-theme="none" />
+									<button data-role="button" type="button" class="btn-search"><span class="arrow-icon"></span></button>
+								</div>
+							</div>
+							<div class="form-custom">
+								<div class="enter-your-address" style="width: 75%; margin: 0 auto; ">
+									<input type="text" placeholder="Food truck name" id="foodTruckName" data-theme="none"  />
+								</div>
+							</div>
+							<div class="search-box-center">
+								<button data-role="button" type="button" class="btn-submit" id="submit-btn" data-transition="flow"></button>
+							</div>
+						</form>
+					</div>
+				</div><!-- /content -->
+			</section>
+		</div>
+		
+	
+		<div data-role="page" id="searchResult">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#searchResult" title="What The Trucks">Search Results</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+					<div class="ui-bar ui-bar-b">
+						<div class="top-blue-bar" data-position="fixed">
+							<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+						</div>
+					</div>
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="inner-content">
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<img src="img/brand-logo.png" alt="" class="img-thumbnail img-left" />
+								<h3><a href="#truckDetails">Benny's Crepe Cafe</a></h3>
+								<div class="inline-icon">
+									<span class="icon-block location">Lunch at Harvard Yard</span>
+								</div>
+								<div class="inline-icon">
+									<span class="icon-block time">10am - 6:30pm</span>
+									<span class="icon-block order">Accepts WTT Orders</span>
+								</div>
+								<div class="right-small-box">
+									<h6>2.54mi</h6>
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div> <!-- This .bar will be loop -->
+						
+						
+						
+						
+					</div>
+				</section><!-- /content -->
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="truckDetails">
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#searchResult" title="What The Trucks">Menu</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="ui-bar ui-bar-b">
+							<div class="top-blue-bar" data-position="fixed">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						<div class="bar">
+							<div class="search-result-box">
+								<h3><a href="#truckDetails" class="ui-link">Renula's Greek Kitchen</a></h3>
+								<div class="inline-box">
+									<span>Pickup: 35 min</span>
+									<span>$0 Minimum</span>
+								</div>
+								<div class="right-small-box">
+									<span class="big-calender"></span>
+								</div>
+							</div>
+							<select name="select-choice-1" id="select-choice-1">
+							   <option value="1">Lunch at City Hall Plaza,  7pm - 10pm</option>
+							   <option value="2">Lunch at City Hall Plaza,  10pm - 12pm</option>
+							   <option value="3">Lunch at City Hall Plaza,  8pm - 10pm</option>
+							   <option value="4">Lunch at City Hall Plaza,  5pm - 7pm</option>
+							</select>
+							<div class="collapsed-schedule">
+								<div class="schedule-box">
+									<h3><span class="left">Weekly Schedule</span> Monday, November 17</h3>
+									<div class="scroll-box">
+										<ul class="list-date">
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+											<li>
+												<span class="location-icon"></span>
+												<h4>Wednesday <span>10:30am - 12:30pm</span></h4>
+												<p>Lunch at Harvard Yard</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="list-truck-price">
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="search-result-box">
+									<h4><a href="#truckdetailsPopup" class="ui-link" data-rel="popup" data-position-to="window" data-transition="pop">Smoked Salmon Crepe</a></h4>
+									<p>Nova lox salmon, cream cheese, red-onion caper mix served on a bed or arugula</p>
+									<div class="right-small-box">
+										<h5>$8.00+</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						 
+					</div>
+					
+					<div data-role="popup" id="truckdetailsPopup" data-theme="a" class="ui-corner-all">
+				        <div class="popUp">
+				            
+				            <div class="listGroup">
+								<div class="bar bar-default">
+									<form action="" method="post">
+									    <div class="increase-btn">
+									        <label for="name">Quantity</label>
+									        <div class="right">
+										        <div class="dec button">-</div>
+										        <input type="text" data-role="none" data-theme="none" value="1" id="Quantity" name="french-hens">
+										        <div class="inc button">+</div>
+									        </div>
+									    </div>
+									</form>
+								</div>
+								<div class="bar bar-default">
+									<a class="ui-link" href="#">Choice <small>Steak Tips</small></a>
+								</div>
+								<div class="bar bar-default">
+									<a class="ui-link" href="#">Extras <small>Lettuce, Tomato, Pickles, Onions</small></a>
+								</div>
+								<div class="bar bar-default">
+									<a class="ui-link" href="#">Special Instructions <small>(additional charges may apply)</small></a>
+								</div>
+							</div>
+				            
+				        </div>
+				        <div class="popUpFooter">
+				        	<a href="#" data-rel="back" >OK</a>
+				        </div>
+					</div>
+					
+					
+				</section><!-- /content -->
+			
+			</div>	
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#searchResult" title="What The Trucks">Benny’s Crepe Cafe</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</section>
+				
+				<footer data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false">
+					<a href="#checkOut" class="ui-btn full-btn" >Proceed to checkout <span class="next-btn"></span></a>
+				</footer><!-- /footer -->
+				
+			</aside>
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+		
+		<div data-role="page" id="termsOfUse">
+			
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Privacy Policy &amp; Terms of Use</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="colOuter">
+							<div class="col6">
+								<div class="ui-bar ui-bar-b">
+									<div class="top-blue-bar" data-position="fixed">
+										<h2>Privacy Policy</h2>
+									</div>
+								</div>
+								<div class="text-content">
+									<p>Dookans LLC ("Dookans") collects certain information through its websites and mobile sites, located at www.Dookans.com and its blog, located at http://blog.Dookans.com and its Facebook page (collectively, the "Sites"). Your privacy is important to Dookans and this Privacy Policy lays out Dookans's policies and procedures surrounding the collection and handling of such information. This Privacy Policy applies only to the Sites. It does not apply to any restaurant sites, other third party services linked to Dookans Sites or offline activities related to Dookans services.</p>
+									<h3>A.	Information Dookans Collects</h3>	
+									<p>Dookans may collect the following information from users of our Sites: first name, last name, street address, city, state, zip code, cross streets, phone number, e-mail address, Sites-specific display name, GPS location (mobile site) and credit card information (collectively, "Personally Identifiable Information" or "PII"). The Sites are not intended for use by children under the age of 13 and Dookans does not knowingly collect PII from children under the age of 13. Use of Sites services requires that you register and/or create an account ("Account") or use the Sites as a guest. In addition to the PII set forth above, Dookans may collect information regarding Account holders' past Dookans orders, favorite restaurants, customer service inquiries, service/ restaurant reviews and certain social networking preferences relating to the Sites (e.g. pages or entities you like, recommend or follow). Dookans also uses web analytics software to track and analyze traffic on the Sites in connection with Dookans's advertising and promotion of Dookans services. Dookans may publish these statistics or share them with third parties without including PII. Dookans may collect additional PII in connection with blog submissions including professional title, business/personal website, social networking handle/username and the author's photograph.</p>
+									<h3>B.	Dookans's Use Of Collected Information</h3>
+									<p>Dookans uses PII to create users' Accounts, to communicate with users about the Sites' services, to offer users additional services, promotions and special offers and to charge for purchases made through the Sites. Users may opt to allow Dookans to store certain PII used to create users' Accounts, including, but not limited to, credit card information. Dookans uses stored PII to customize future order processing for you. You may request that Dookans cease storing certain PII at any time, but you might not be able to take advantage of certain customized features. [Users may affirmatively opt-out of receiving promotional communications from Dookans by visiting http://www.Dookans.com and providing Dookans with their e-mail address via the opt-out link. – Chris you need to think about this one] Dookans may also use PII to enforce the Sites' terms of use. Dookans uses cookies to remember users on the Sites and to enhance users' experience on the Sites. For example, when users with Accounts return to the Sites, cookies identify those users and allow the Sites to provide certain user-specific information such as Account information, past orders, favorite restaurants and user restaurant reviews. Dookans does not sell the information it collects to third parties. Dookans shares collected PII to third-party vendors and service providers with whom Dookans works to provide application programming interfaces ("APIs") and other functions for the Sites in connection with the delivery of Dookans services. In addition, Dookans shares users' Dookans order content, special order instructions, first and last name, street address and telephone number with restaurants where users' orders are placed to the extent necessary to process those orders. Dookans may also disclose PII to third parties such as attorneys, collection agencies, tribunals or law enforcement authorities pursuant to valid requests in connection with alleged violations of Dookans terms of use and service or other alleged contract violations, infringement or similar harm to persons or property. User generated content posted through the Sites such as service/restaurant reviews and certain social networking preferences relating to the Sites (e.g. pages or entities you like, recommend or follow") may be viewed by the general public. Accordingly, Dookans cannot ensure the privacy of any PII included in such user generated content.</p>
+									<h3>C.	Dookans's Protection of PII</h3>
+									<p>Dookans uses reasonable security measures equal to or exceeding industry standard to protect PII from unauthorized access, destruction, use, modification and disclosure. Unfortunately, even with these measures, Dookans cannot guarantee the security of PII. By using the Sites, you acknowledge and agree that Dookans makes no such guarantee, and that you use the Sites at your own risk.</p>
+									<h3>D.	Accessing and Correcting Your PII</h3>
+									<p>Registered Account holders can access and change their own PII using the "Edit" function on the Dookans website. If you have questions regarding Dookans's use or collection of your PII, please contact Dookans's privacy officer at: <a href="mailto:accounts@Dookans.com">accounts@Dookans.com</a>.</p>
+									<h3>E.	Privacy Policy Amendments</h3>
+									<p>Dookans may change this Privacy Policy at any time by posting a new version on this page or on a successor page. The new version will become effective on the posting date, which will be listed at the top of the page as the effective date.</p>
+								</div>
+							</div>
+							<div class="col6">
+								<div class="ui-bar ui-bar-b">
+									<div class="top-blue-bar" data-position="fixed">
+										<h2>Terms of Use</h2>
+									</div>
+								</div>
+								<div class="text-content">
+									<p>Please read the following Terms of Use carefully before using Dookans or any of the Sites linked through the Dookans.com web site (“Sites”). For inquiries relating to any food orders, see our Return Policy (insert link here). For information on advertising or promoting your restaurant through Dookans, visit Dookans Sign-up Form for Restaurants (insert link here).</p>
+									<h3>1.	Applicability &amp; Acceptance of These Terms of Use</h3>
+									<p>By viewing, using, accessing, browsing, or submitting any content or material on the Sites, you agree to these Terms of Use as a binding legal agreement between you and Dookans, without limitation or qualification. The term "you" or "You" shall refer to any person or entity who views, uses, accesses, browses or submits any content or material to the Sites. </p>
+									<p>If you do not agree to these Terms of Use, then you may not use the Sites. Dookans reserves the right to modify these Terms of Use at any time without prior notice. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>
+		</div>
+		
+				
+		<div data-role="page" id="howWorks">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">How it works</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="how-works-box">
+							<h3>What The Trucks</h3>
+							<ul class="works-steps">
+								<li>
+									<span class="order-icon"></span>
+									<h4>Order and Pay</h4>
+									<p>Order online or via the What The Trucks mobile apps.</p>
+								</li>
+								<li>
+									<span class="skip-icon"></span>
+									<h4>Skip The Line</h4>
+									<p>Skip the food truck line and pickup your order at your desiered pickup time.</p>
+								</li>
+								<li>
+									<span class="pick-icon"></span>
+									<h4>Pick Up Your Order</h4>
+									<p>Head to your food truck of choice and pickup your hot and ready order! Then enjoy.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="logIn">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Sign In</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="logInBox">
+							<h3>Select One</h3>
+							<p>Please select your preferred sign in method, must sign in to check out.</p>
+							<div class="logInList">
+								<ul>
+									<li>
+										<a href="#" class="facebook">facebook</a>
+									</li>
+									<li>
+										<a href="#" class="twitter">twitter</a>
+									</li>
+									<li>
+										<a href="#" class="gPlus">gPlus</a>
+									</li>
+									<li>
+										<a href="#" class="yahoo">yahoo</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="settings">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Settings</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="settingsBox">
+							<div class="settingBorderRow">
+								<span class="fbSttings"></span>
+								<h4>Signed in as</h4>
+								<h6>poakchris@gmail.com</h6>
+							</div>
+							<div class="listGroup">
+								<div class="bar bar-default">
+									<a href="#">Manage Contact Info</a>
+								</div>
+								<div class="bar bar-default">
+									<a href="#">Manage Credit Cards</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>	
+		</div>
+		
+		
+		<div data-role="page" id="contactInfo">
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Add Contact</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="ui-bar ui-bar-b">
+							<div class="top-blue-bar" data-position="fixed">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						<div class="contactInfoHeader">
+							<div class="ui-bar ui-bar-white">
+								<h2>Add Contact Info <span class="right plus-icon"></span></h2>
+							</div>
+							<div class="ui-bar ui-bar-pulple">
+								<h2>Select Preferred Address</h2>
+							</div>
+						</div>
+						<div class="contactInfoList">
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+									<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+									<p>75 Crosstown Ave</p>
+									<p>West Roxbury, MA 02132</p>
+									<span class="right-icon heart-icon active"></span>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+									<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+									<p>75 Crosstown Ave</p>
+									<p>West Roxbury, MA 02132</p>
+									<span class="right-icon heart-icon"></span>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+									<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+									<p>75 Crosstown Ave</p>
+									<p>West Roxbury, MA 02132</p>
+									<span class="right-icon heart-icon"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>	
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+			</aside>
+			
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#checkOut" class="ui-btn full-btn" >Place Order</a>
+			</footer><!-- /footer -->
+			
+		</div>
+		
+		
+		<div data-role="page" id="paymentMethod">
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Add Contact</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="ui-bar ui-bar-b">
+							<div class="top-blue-bar" data-position="fixed">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						<div class="contactInfoHeader">
+							<div class="ui-bar ui-bar-white">
+								<h2>Add Contact Info <span class="right plus-icon"></span></h2>
+							</div>
+							<div class="ui-bar ui-bar-pulple">
+								<h2>Select Preferred Payment</h2>
+							</div>
+						</div>
+						<div class="contactInfoList">
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><b>Visa:</b> **** **** **** 1234</h2>
+									<h2>Exp: 07/16</h2>
+									<span class="right-icon heart-icon active"></span>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><b>Disc:</b> **** **** **** 1234</h2>
+									<h2>Exp: 02/16</h2>
+									<span class="right-icon heart-icon"></span>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><b>Amex:</b> **** ****** 12345</h2>
+									<h2>Exp: 02/16</h2>
+									<span class="right-icon heart-icon"></span>
+								</div>
+							</div>
+							<div class="bar bar-default">
+								<div class="addressBar">
+									<h2><b>Master:</b> **** **** **** 1234</h2>
+									<h2>Exp: 02/16</h2>
+									<span class="right-icon heart-icon"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- /content -->
+			</div>	
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+			</aside>
+			
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#checkOut" class="ui-btn full-btn" >Place Order</a>
+			</footer><!-- /footer -->
+			
+		</div>
+		
+		
+		<div data-role="page" id="pickUp">
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Add Contact</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="ui-bar ui-bar-b">
+							<div class="top-blue-bar" data-position="fixed">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						<div class="contactInfoHeader">
+							<div class="ui-bar ui-bar-white">
+								<h2><b>Dinner at City Hall Plaza</b></h2>
+								<h4><b>10am - 6:30pm</b></h4>
+							</div>
+							<div class="ui-bar ui-bar-blue">
+								<h2>Change Pick Up Time</h2>
+							</div>
+						</div>
+						<div class="pickUpBox">
+							<select name="pickUpTime" id="pickUpTime">
+							   <option value="1">6:00 pm</option>
+							   <option value="1">8:00 pm</option>
+							   <option value="1">10:00 pm</option>
+							   <option value="1">11:30 pm</option>
+							</select>
+						</div>
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#" class="ui-btn full-btn" >Save Selection</a>
+				</footer><!-- /footer -->
+			</div>	
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+				<footer data-role="footer" data-position="fixed" data-theme="a">
+					<a href="#checkOut" class="ui-btn full-btn" >Proceed to checkout <span class="next-btn"></span></a>
+				</footer><!-- /footer -->
+			</aside>
+			
+			
+			
+		</div>
+		
+				
+		<div data-role="page" id="newCard">
+			<div class="pageContent ui-panel-wrapper">	
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">New Card</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="extraPaddingContent">
+						
+							<form role="form" class="defaultForm">
+								<div class="textCenter">
+									<label>Select Card Type</label>
+									<fieldset data-mini="true" class="selectCardType" id="cardType">
+										<div class="ui-block">
+											<a href="#" class="ui-btn visa-btn">visa</a>
+										</div>
+										<div class="ui-block">
+											<a href="#" class="ui-btn americanExpress-btn">americanExpress</a>
+										</div>
+										<div class="ui-block">
+											<a href="#" class="ui-btn masterCard-btn">masterCard</a>
+										</div>
+										<div class="ui-block">
+											<a href="#" class="ui-btn discover-btn">discover</a>
+										</div>
+									</fieldset>
+								</div>
+								<label for="nameOnCard">Name on Card</label>
+							    <input data-clear-btn="true" name="nameOnCard" id="nameOnCard" value="" type="text">
+							    
+							    <label for="cardNumber">Card Number</label>
+							    <input data-clear-btn="true" name="cardNumber" id="cardNumber" value="" type="text">
+							    
+							    
+							    <fieldset class="ui-grid-a">
+								    <div class="ui-block-a">
+								    	<label for="expMonth">Exp. Month</label>
+								    	<input type="month" type="text" name="expMonth" id="expMonth" value="">
+							    	</div>
+								    <div class="ui-block-b">
+								    	<label for="expYear">Exp. Year</label>
+								    	<input type="text" name="expYear" id="expYear" value="">
+							    	</div>
+								</fieldset>
+								
+								<fieldset class="ui-grid-a">
+								    <div class="ui-block-a">
+								    	<label for="CVVCode">CVV Code</label>
+								    	<input type="month" type="text" name="CVVCode" id="CVVCode" value="">
+							    	</div>
+								    <div class="ui-block-b">
+								    	<label for="ZIP">ZIP</label>
+								    	<input type="text" name="ZIP" id="ZIP" value="">
+							    	</div>
+								</fieldset>
+							</form>
+						
+						</div>
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#" class="ui-btn full-btn">Add</a>
+				</footer><!-- /footer -->
+			</div>
+		</div>
+				
+		
+		<div data-role="page" id="newAddress">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">New Address</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="extraPaddingContent">
+						
+							<form role="form" class="defaultForm">
+															
+								<label for="Name">Name</label>
+							    <input data-clear-btn="true" name="Name" id="Name" value="" type="text">
+							    
+							    <label for="Address">Address</label>
+							    <input data-clear-btn="true" name="Address" id="Address" value="" type="text">
+							    
+							    <label for="City">City</label>
+							    <input data-clear-btn="true" name="City" id="City" value="" type="text">
+							    
+							    <fieldset class="ui-grid-a">
+								    <div class="ui-block-a">
+								    	<label for="ZIP">ZIP</label>
+								    	<input type="month" type="text" name="ZIP" id="ZIP" value="">
+							    	</div>
+								    <div class="ui-block-b">
+								    	<label for="Mobile">Mobile</label>
+								    	<input type="text" name="Mobile" id="Mobile" value="">
+							    	</div>
+								</fieldset>
+							    
+							    <label for="Email">Email</label>
+							    <input data-clear-btn="true" name="Email" id="Email" value="" type="email">
+							    
+							</form>
+						
+						</div>
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#" class="ui-btn full-btn">Add</a>
+				</footer><!-- /footer -->
+			</div>
+		</div>
+			
+		
+		<div data-role="page" id="addItem">
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Food</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+				
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="ui-bar ui-bar-b">
+							<div class="top-blue-bar" data-position="fixed">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						
+						<div class="contactInfoHeader">	
+							<div class="ui-bar ui-bar-white">
+								<h2>Smoked Salmon Crepe <span class="right">$8.00</span></h2>
+								<p>Nova lox salmon, red onion, cream cheese, caper mix</p>
+							</div>				
+							<div class="ui-bar ui-bar-pulple">
+								<h2>Item Options</h2>
+							</div>
+						</div>
+						
+						
+						<div class="listGroup">
+							<div class="bar bar-default">
+								<form method="post" action="">
+								    <div class="increase-btn">
+								        <label for="name">Quantity</label>
+								        <div class="right">
+									        <div class="dec button">-</div>
+									        <input type="text" name="french-hens" id="french-hens" value="1" data-theme="none" data-role="none">
+									        <div class="inc button">+</div>
+								        </div>
+								    </div>
+								</form>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Choice <small>Steak Tips</small></a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Extras <small>Lettuce, Tomato, Pickles, Onions</small></a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Special Instructions <small>(additional charges may apply)</small></a>
+							</div>
+						</div>
+						
+						
+						
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#Basket" class="ui-btn full-btn" >Add to Basket</a>
+				</footer><!-- /footer -->
+			</div>	
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right">$2.00</span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+				<footer data-role="footer" data-position="fixed" data-theme="a">
+					<a href="#checkOut" class="ui-btn full-btn" >Proceed to checkout <span class="next-btn"></span></a>
+				</footer><!-- /footer -->
+			</aside>
+			
+		</div>
+		
+						
+		<div data-role="page" id="Basket">
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Basket</a></h2>
+					<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="contactInfoHeader">	
+							<div class="headerTopBox">
+								<h2><a class="ui-link" href="#">Benny’s Crepe Cafe</a></h2>
+								<span class="icon-block location">Rings Fountain at Milk Street</span>
+								<div class="inline-icon">
+									<span class="icon-block time"><b>10am - 6:30pm</b></span>
+									<span class="icon-block order right"><b>Pickup: </b> 35 min</span>
+								</div>
+							</div>
+						</div>
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<div class="total">
+							<h3>Total: <span>$16.00</span></h3>
+						</div>
+						<div class="addItem">
+							<a href="#addItem" class="addItemLink"></a>
+						</div>
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#popupExample" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn full-btn" >Proceed to checkout</a>
+				</footer><!-- /footer -->
+				<div data-role="popup" id="popupExample" data-theme="a" class="ui-corner-all">
+			        <div class="popUp">
+			            <h2>Benny’s Crepe Cafe</h2>
+			            <p>Please use same copy for all pop ups as website and this design for all pop ups</p>
+			        </div>
+			        <div class="popUpFooter">
+			        	<a href="#" data-rel="back" >OK</a>
+			        </div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="checkOut">
+			
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Checkout</a></h2>
+					<a href="#Basket" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">						
+						<div class="ui-bar ui-bar-b">
+							<div data-position="fixed" class="top-blue-bar">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						
+						<div class="search-result-box">
+							<h3><a class="ui-link" href="#">Renula's Greek Kitchen</a></h3>
+							<div class="inline-box">
+								<span>Pickup: 35 min</span>
+								<span>$0 Minimum</span>
+							</div>
+							
+						</div>
+						
+						
+						<div class="ui-bar ui-bar-pulple">
+							<h2 class="block">Lunch at City Hall Plaza <span class="right">10:30am - 12:30pm</span></h2>
+						</div>
+						
+						<div class="listGroup">
+							<div class="bar bar-default">
+								<a href="#newAddress" class="ui-link">Add Contact Information</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Select Payment</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#pickUp" class="ui-link">Change Pickup Time</a>
+							</div>
+						</div>
+											
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#checkOut" class="ui-btn full-btn">Checkout</a>
+				</footer><!-- /footer -->
+			</div>
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+				<footer data-role="footer" data-position="fixed" data-theme="a">
+					<a href="#checkOut" class="ui-btn full-btn" >Proceed to checkout <span class="next-btn"></span></a>
+				</footer><!-- /footer -->
+			</aside>
+		</div>
+		
+		
+		
+		<div data-role="page" id="checkOutContact">
+			
+			<div class="pageContent ui-panel-wrapper threeColom">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Checkout</a></h2>
+					<a href="#Basket" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">						
+						<div class="ui-bar ui-bar-b">
+							<div data-position="fixed" class="top-blue-bar">
+								<h2>75 Crosstown Ave, West Roxbury, MA 02132</h2>
+							</div>
+						</div>
+						
+						<div class="search-result-box">
+							<h3><a class="ui-link" href="#">Renula's Greek Kitchen</a></h3>
+							<div class="inline-box">
+								<span>Pickup: 35 min</span>
+								<span>$0 Minimum</span>
+							</div>
+							
+						</div>
+						
+						
+						<div class="ui-bar ui-bar-pulple">
+							<h2 class="block">Lunch at City Hall Plaza <span class="right">10:30am - 12:30pm</span></h2>
+						</div>
+						
+						<div class="listGroup">
+							<div class="bar bar-default">
+								<a class="addressBar" href="#">
+									<h2><b>Christos Kyriakidis</b></h2>
+									<p>poakchris@gmail.com</p>
+									<p>75 Crosstown Ave</p>
+									<p>West Roxbury, MA 02132</p>
+								</a>
+							</div>
+							<div class="bar bar-default">
+								<a class="addressBar" href="#">
+									<p>Visa: **** **** **** 1234</p>
+									<p>Exp: 07/16</p>
+								</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Change Pickup Time <span>1:30pm</span></a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Special Instructions</a>
+							</div>
+						</div>
+											
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#checkOut" class="ui-btn full-btn">Checkout</a>
+				</footer><!-- /footer -->
+			</div>
+			<aside data-role="panel" data-position="right" data-dismissible="false" class="rightPanel">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Renula’s Greek Kitchen</a></h2>
+					
+				</header><!-- /header -->
+				<section data-role="content">
+					<div class="top-blue-bar" data-position="fixed">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+					</div>
+				</section>
+				<footer data-role="footer" data-position="fixed" data-theme="a">
+					<a href="#checkOut" class="ui-btn full-btn" >Proceed to checkout <span class="next-btn"></span></a>
+				</footer><!-- /footer -->
+			</aside>
+		</div>
+		
+		
+		<div data-role="page" id="Confirmation">
+			
+			<div class="pageContent ui-panel-wrapper">
+				<header data-role="header" data-id="my-header" data-position="fixed">
+					<h2><a href="#" title="What The Trucks">Thank You</a></h2>
+					<a href="#Basket" data-position="left" class="back-btn" data-theme="none" ></a>
+				</header><!-- /header -->
+			
+				<section data-role="content">
+					<div class="inner-content">
+						<div class="contactInfoHeader">		
+							<div class="headerTopBox">
+								<h2><a class="ui-link" href="#">Benny’s Crepe Cafe</a></h2>
+								<span>Rings Fountain at Milk Street</span>
+								<div class="inline-icon">
+									<span><b>Order:</b>123456</span>
+									<span class="right"><b>Pickup: </b> 35 min</span>
+								</div>
+							</div>
+						</div>
+						
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<div class="total">
+							<p>
+								<span class="left-label"><b>Subtotal:</b></span>
+								<span class="right">$16.00</span>
+							</p>
+							<p>
+								<span class="left-label"><b>Tax:</b></span>
+								<span class="right">$1.25</span>
+							</p>
+							<p>
+								<span class="left-label"><b>Tip:</b></span>
+								<span class="right">$2.00</span>
+							</p>
+							<p style="font-size: 15px;">
+								<span class="left-label"><b>Total:</b></span>
+								<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+							</p>
+							
+						</div>
+						
+						<div class="listGroup">
+							<div class="bar bar-default">
+								<a class="addressBar" href="#">
+									<h2><b>Christos Kyriakidis</b></h2>
+									<p>poakchris@gmail.com</p>
+									<p>75 Crosstown Ave</p>
+									<p>West Roxbury, MA 02132</p>
+								</a>
+							</div>
+							<div class="bar bar-default">
+								<a class="addressBar" href="#">
+									<p>Visa: **** **** **** 1234</p>
+									<p>Exp: 07/16</p>
+								</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Change Pickup Time <span>1:30pm</span></a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#" class="ui-link">Special Instructions</a>
+							</div>
+						</div>
+											
+					</div>
+				</section><!-- /content -->
+				<footer data-role="footer" data-position="fixed" data-theme="b">
+					<a href="#home" class="ui-btn full-btn">Home</a>
+				</footer><!-- /footer -->
+			</div>
+		</div>
+		
+		
+		<aside data-role="panel" id="nav-panel" data-position="left" data-dismissible="false" data-display="reveal">
+    		 <ul class="main-menu">
+		    	<li><a href="#home"><span class="menu-home"></span>Home</a></li>
+		    	<li><a href="#howWorks"><span class="menu-howitworks"></span>How It Works</a></li>
+		    	<li><a href="#Basket"><span class="menu-basket"></span>Basket</a></li>
+		    	<li><a href="#termsOfUse"><span class="menu-terms"></span>Terms</a></li>
+		    	<li><a href="#settings"><span class="menu-settings"></span>Settings</a></li>
+		    	<li><a href="#logIn"><span class="menu-signin"></span>Sign In</a></li>
+		    </ul>
+		   
+    	</aside>
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/retina.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+        
+			app.initialize();
+			
+			$('#submit-btn').click(function() {
+				$.mobile.changePage("#searchResult");
+			});
+			
+			$('.right-small-box').click(function() {
+				$(this).parent().parent().find(".collapsed-schedule").slideToggle();
+			});
+			
+			$(".contactInfoList .addressBar").click(function(){
+			  if ($(this).find(".heart-icon").is(".active")) {
+			   		$(this).removeClass("active");
+			  }
+			  else {
+			   	$(".contactInfoList .bar .heart-icon").removeClass("active");
+			   	$(this).find(".heart-icon").addClass("active");
+			  }
+		 	});
+		 	
+		 	$("#cardType .ui-btn").click(function(){
+			  if ($(this).is(".active")) {
+			   		$(this).removeClass("active");
+			  }
+			  else {
+			   	$("#cardType .ui-btn").removeClass("active");
+			   	$(this).addClass("active");
+			  }
+		 	});
+		 	
+		 	
+		 		 	
+		 	$(".button").on("click", function() {
+			  var $button = $(this);
+			  var oldValue = $button.parent().find("input").val();
+			
+			  if ($button.text() == "+") {
+				  var newVal = parseFloat(oldValue) + 1;
+				} else {
+			   // Don't allow decrementing below zero
+			    if (oldValue > 0) {
+			      var newVal = parseFloat(oldValue) - 1;
+			    } else {
+			      newVal = 0;
+			    }
+			  }
+			
+			  $button.parent().find("input").val(newVal);
+			
+			});
+			
+			
+			$('.delete').click(function() {
+				$(this).parent().parent().remove();
+			});
+			
+			
+			$(function() {
+				$( "body>[data-role='panel']" ).panel();
+			});
+			
+			
+			
+			
+			
+			
+			//$(document).on('pagecreate', function() {
+			    //$("#nav-panel").panel("open");
+			//});
+				
+		
+						
+        </script>
+
+    </body>
+</html>

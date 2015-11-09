@@ -1,0 +1,148 @@
+ $.cookie("pickuptime"
+ $.cookie("minorderamt", minorderamt, { expires: date });
+
+
+ <span id="pickupcheckout">Pickup: 35 min</span>
+								<span id="mincheckout">$0 Minimum</span>
+
+								<h2 class="block" id="leftpartcheckout">Lunch at City Hall Plaza <span class="right" id="rightpartcheckout">10:30am - 12:30pm</span></h2>
+
+
+								$.cookie("selectedText", selectedText, { expires: date });
+
+
+
+
+
+								<div class="bar bar-default">
+								<a href="#contactInfo" class="ui-link" id="checkoutcontactinfo">Add Contact Information</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#paymentMethod" class="ui-link" id="checkoutcardpayment">Add Payment Information</a>
+							</div>
+
+
+
+
+
+
+								document.getElementById("final_sendstr").value="'"+name1+'=='+email1+'=='+address1+'=='+city1+'=='+state1+'=='+zipcode1+'=='+id1+'=='+phone1+"'";
+								document.getElementById("final_email").value=final_email;
+								var ddd="'"+name1+'=='+email1+'=='+address1+'=='+city1+'=='+state1+'=='+zipcode1+'=='+id1+'=='+phone1+"'";
+								
+								 var final_paymentprofId=payment_profid;
+								var final_payment_info=lasfour;
+							       var final_payment_expdate=payment_expdate;
+								var final_payment_cardtype=cardtype;
+						
+						
+							       document.getElementById("final_sendstr_payment").value="'"+final_payment_info+'=='+final_payment_expdate+'=='+final_payment_cardtype+"'";
+						
+							       //alert(final_paymentprofId);
+							       document.getElementById("final_paymentprofId").value=final_paymentprofId;
+							      // alert('function sendfacebookcnct - '+final_payment_info);
+							       document.getElementById("payment_info").value=final_payment_info;
+								document.getElementById("payment_expirydate").value=final_payment_expdate;
+
+
+
+
+								<a href="#newAddress" class="ui-link"><span style="font-weight: 600; font-size: larger;">Shwetaa</span><br/><span>shwetaa.chakroborti@esolzmail.com</span><br/><span>Rajarhat</span><br/><span>Kolkata, Hawaii 66545</span><br/><span>998-456-0987</span></a>
+
+
+
+								<a href="#" class="ui-link"><span>Visa: **** **** **** 2352</span><br><span>Exp: 2016-03</span></a>
+
+
+
+
+
+								var final_sendstr=document.getElementById("final_sendstr").value;
+                 		if(final_sendstr!="'=============='"){
+                 			var splitvals=final_sendstr.split('==');
+		                    var name_final=splitvals[0];
+		                    var email_final=splitvals[1];
+		                    var addr_final=splitvals[2];
+		                    var city_final=splitvals[3];
+		                    var state_final=splitvals[4];
+		                    var zipcode_final=splitvals[5];
+		                    var address_id=splitvals[6];
+		                    var phone1_final=splitvals[7];
+
+		                    name_final=name_final.replace("'","");
+                    		phone1_final=phone1_final.replace("'","");
+
+                    		document.getElementById('checkoutcontactinfo').innerHTML='<span style="font-weight: 600; font-size: larger;">'+name_final+'</span><br/><span>'+email_final+'</span><br/><span>'+city_final+'</span><br/><span>'+state_final+', '+address_id+' '+zipcode_final+'</span><br/><span>'+phone1_final+'</span>';
+
+                 		}else{
+                 			document.getElementById('checkoutcontactinfo').innerHTML='Add Contact Information';
+                 		}
+
+                 		//alert('final_sendstr_payment - '+document.getElementById("final_sendstr_payment").value);
+                 		var final_sendstr_payment=document.getElementById("final_sendstr_payment").value;
+                 		if(final_sendstr_payment!="'===='"){
+                 			 var splitvals=final_sendstr_payment.split('==');
+		                    var last_four=splitvals[0];
+		                    var expdate=splitvals[1];
+		                    var pmtcardtype=splitvals[2];
+
+		                    //alert(last_four);
+
+		                    var lastfour_new=last_four.replace("'","");
+		                    var expdate_new=expdate.replace("'","");
+		                    var pmtcardtype_new=pmtcardtype.replace("'","");
+
+		                    document.getElementById('checkoutcardpayment').innerHTML='<span>'+pmtcardtype_new+': **** **** **** '+lastfour_new+'</span><br><span>Exp: '+expdate_new+'</span>';
+                 		}else{
+                 			document.getElementById('checkoutcardpayment').innerHTML='Add Payment Information';
+                 		}
+
+
+
+                 		<tbody id="checkouttop">
+								<!-- <tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div id="checkoutbottom">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

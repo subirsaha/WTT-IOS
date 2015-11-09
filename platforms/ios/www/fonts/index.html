@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+    	
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+
+<style type="text/css">
+               /*body {
+                       font-family: sans-serif;
+                       font-size: 14px;
+               }*/
+       </style>
+
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+       
+
+        <script type="text/javascript">
+               function initialize() {
+                       var input = document.getElementById('whereYou');
+                       var autocomplete = new google.maps.places.Autocomplete(input);
+                       
+                 
+               }
+               google.maps.event.addDomListener(window, 'load', initialize);
+
+
+       </script>
+    </head>
+    <body onload="onBodyLoad();" >
+    	
+    	
+        <div data-role="page" id="home" style="padding-top:10px;"> 
+			<header data-role="header" data-id="my-header" data-position="fixed" style="padding-top:10px;">
+				<h2><a href="index.html" title="What The Trucks">What The Trucks</a></h2>
+				<a href="index.html"  data-position="left" class="" data-theme="none"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="home-content">
+					<a href="#home" class="home-link"><img src="img/truck-logo.png" alt="" /></a>
+					<hr />
+					<h1>Find a Food Truck</h1>
+
+
+
+					<form role="form" class="home-search-box">
+						<div class="form-custom">
+							<label for="whereYou">Where are you?</label>
+							<div class="enter-your-address">
+								<input type="text" autocomplete="on" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your address" id="whereYou" data-theme="none"  />
+								<button data-role="button" type="button" class="btn-search" onclick="seeAdreesa()"><span class="arrow-icon"></span></button>
+							</div>
+						</div>
+						<div class="form-custom">
+							<label for="foodTruckName">Search by truck <small>(optional)</small> </label>
+							<div class="enter-your-address">
+								<input type="text" placeholder="Food truck name" id="foodTruckName" data-theme="none"  />
+							</div>
+						</div>
+						<div class="search-box-center">
+							<button data-role="button" type="button" class="btn-submit" id="submit-btn" data-transition="flow"></button>
+						</div>
+					</form>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+	
+		<div data-role="page" id="searchResult">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#searchResult" title="What The Trucks">Search Results</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+				<div class="ui-bar ui-bar-b">
+					<div class="top-blue-bar" data-position="fixed" id="adreesval">
+						
+					</div>
+				</div>
+			</header><!-- /header -->
+			<section data-role="content">
+				<div class="inner-content" id="searchrslt">
+					<!-- This .bar will be loop -->
+					<!-- This .bar will be loop -->
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="truckDetails">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#searchResult" title="What The Trucks">Menu</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+				<div class="ui-bar ui-bar-b">
+					<div class="top-blue-bar" data-position="fixed" id="adreesval1">
+						<!-- <h2>75 Crosstown Ave</h2> -->
+					</div>
+				</div>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content" id="searchrsltDetls">
+					 
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart" id="cart_onclick"><span class="cart_value" id="cartval">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+
+
+<div data-role="popup" id="truckdetailsPopup" data-theme="a" class="ui-corner-all">
+                        <div class="popUp">
+                            
+                            <div class="listGroup">
+                                <div class="bar bar-default">
+                                    <form action="" method="post">
+                                        <div class="increase-btn">
+                                        	<div class="show_itemname"></div>
+                                            <label for="name">Quantity</label>
+                                            <div class="right">
+                                                <div class="dec button">-</div>
+                                                <input type="text" data-role="none" data-theme="none" value="1" id="Quantity" name="french-hens" disabled>
+                                                <div class="inc button">+</div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bar bar-default">
+                            <label>Sauce</label>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <input type="radio" id="MediaumSalsa" name="Saucerd" data-theme="a" value="Mediaum Salsa" />
+                                    <label for="MediaumSalsa">Mediaum Salsa</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    <input type="radio" id="HotSalsa" name="Saucerd" data-theme="a" value="Hot Salsa"/>
+                                    <label for="HotSalsa">Hot Salsa</label>
+                                </div>
+                            </div>
+                        </div>
+                                <div class="bar bar-default">
+                            <label style="width: 100%">Special Instruction (Additional Changes May Apply)</label>
+                            <textarea id="descprtn"></textarea>
+                        </div>
+                            </div>
+                            
+                        </div>
+                        <div class="popUpFooter">
+                            <a href="#" data-rel="back" onclick="storeVal();" >Add To Order</a>
+                        </div>
+                    </div>
+		</div>
+
+
+<!-- 			<div data-role="popup" id="truckdetailsPopup" data-theme="a" class="ui-corner-all">
+                <div class="popUp text-left">
+                   
+                    <form class="listGroup" action="" method="post">
+                        <div class="bar bar-default">
+                            <div class="increase-btn">
+                                <label for="name">Quantity</label>
+                                <div class="right">
+                                    <div class="dec button">-</div>
+                                
+                                    <input type="text" data-role="none" data-theme="none" value="1" id="Quantity" name="french-hens" disabled />
+                                    <div class="inc button">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar bar-default">
+                            <label>Sauce</label>
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a">
+                                    <input type="radio" id="MediaumSalsa" name="Saucerd" data-theme="a" value="Mediaum Salsa" />
+                                    <label for="MediaumSalsa">Mediaum Salsa</label>
+                                </div>
+                                <div class="ui-block-b">
+                                    <input type="radio" id="HotSalsa" name="Saucerd" data-theme="a" value="Hot Salsa"/>
+                                    <label for="HotSalsa">Hot Salsa</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar bar-default">
+                            <label style="width: 100%">Special Instruction (Additional Changes May Apply)</label>
+                            <textarea id="descprtn"></textarea>
+                        </div>
+                    </form>
+                   
+                </div>
+                <div class="popUpFooter">
+                    <a href="javascript:void(0)" data-rel="back" onclick="storeVal();">OK</a>
+                </div>
+          
+       </div>
+		 -->
+		
+		<div data-role="page" id="termsOfUse">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Terms of Use</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="text-content">
+                        
+                        <iframe src="https://dookans.com/terms_of_use.html" height="100%" width="100%" style="border:none;font-size:80%;"></iframe>
+                            
+                            
+                            
+<!--						<h3>1. Applicability &amp; Acceptance of These Terms of Use</h3>-->
+<!--						<p>By viewing, using, accessing, browsing, or submitting any content or material on the Sites, you agree to these Terms of Use as a binding legal agreement between you and Dookans, without limitation or qualification. The term "you" or "You" shall refer to any person or entity who views, uses, accesses, browses or submits any content or material to the Sites.</p>-->
+<!--						<p>If you do not agree to these Terms of Use, then you may not use the Sites. Dookans reserves the right to modify these Terms of Use at any time without prior notice.</p>-->
+<!--						<p>You agree that each visit you make to the Sites shall be subject to the then-current Terms of Use, and continued use of the Sites now or following modifications in these Terms of Use confirms that you have read, accepted, and agreed to be bound by such modifications.</p>						-->
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="privacyPolicy">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Privacy Policy</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="text-content">
+                        
+                         <iframe src="https://dookans.com/Privacy.html" height="100%" width="100%" style="border:none;font-size:80%;"></iframe>
+                        
+<!--						<h3>A.	Information Dookans Collects</h3>-->
+<!--						<p>Dookans may collect the following information from users of our Sites: first name, last name, street address, city, state, zip code, cross streets, phone number, e-mail address, Sites-specific display name, GPS location (mobile site) and credit card information (collectively, "Personally Identifiable Information" or "PII"). The Sites are not intended for use by children under the age of 13 and Dookans does not knowingly collect PII from children under the age of 13. Use of Sites services requires that you register and/or create an account ("Account") or use the Sites as a guest. In addition to the PII set forth above, Dookans may collect information regarding Account holders' past Dookans orders, favorite restaurants, customer service inquiries, service/ restaurant reviews and certain social networking preferences relating to the Sites (e.g. pages or entities you like, recommend or follow). Dookans also uses web analytics software to track and analyze traffic on the Sites in connection with Dookans's advertising and promotion of Dookans services. Dookans may publish these statistics or share them with third parties without including PII. Dookans may collect additional PII in connection with blog submissions including professional title, business/personal website, social networking handle/username and the author's photograph.</p>						-->
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="howWorks">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">How it works</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="how-works-box">
+						<h3>What The Trucks</h3>
+						<ul class="works-steps">
+							<li>
+								<span class="order-icon"></span>
+								<h4>Order and Pay</h4>
+								<p>Order online or via the What The Trucks mobile apps.</p>
+							</li>
+							<li>
+								<span class="skip-icon"></span>
+								<h4>Skip The Line</h4>
+								<p>Skip the food truck line and pickup your order at your desiered pickup time.</p>
+							</li>
+							<li>
+								<span class="pick-icon"></span>
+								<h4>Pick Up Your Order</h4>
+								<p>Head to your food truck of choice and pickup your hot and ready order! Then enjoy.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="logIn">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Sign In</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="logInBox">
+						<h3>Select One</h3>
+						<p>Please select your preferred sign in method, must sign in to check out.</p>
+						<div class="logInList">
+							<ul>
+								<li>
+									<a href="#" class="facebook" onclick="login();">facebook</a>
+								</li>
+								<li>
+									<a href="#" class="twitter" id="isAvailable" >twitter</a>
+								</li>
+								<li>
+									<a href="#" class="gPlus" onclick="logingoogle()">gPlus</a>
+								</li>
+								<li>
+									<a href="#" class="yahoo">yahoo</a>
+								</li>
+							</ul>
+                            
+						</div>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+			<div id="fb-root"></div>
+		</div>
+		
+		
+		<div data-role="page" id="settings">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Settings</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="settingsBox">
+						<div class="settingBorderRow">
+							<span class="fbSttings"></span>
+							<h4>Signed in as</h4>
+							<h6>poakchris@gmail.com</h6>
+						</div>
+						<div class="listGroup">
+							<div class="bar bar-default">
+								<a href="#">Manage Contact Info</a>
+							</div>
+							<div class="bar bar-default">
+								<a href="#">Manage Credit Cards</a>
+							</div>
+							<div class="bar bar-default">
+								<label for="flip2">Allow Social Sharing</label>
+					            <select name="flip2" id="flip2" data-role="slider" data-corners="false" data-shadow="false">
+					                <option value="off">Off</option>
+					                <option value="on">On</option>
+					            </select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="contactInfo">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Contact Info</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="contactInfoHeader">
+						<div class="ui-bar ui-bar-white">
+							<h2>Add Contact Info <span class="right plus-icon"></span></h2>
+						</div>
+						<div class="ui-bar ui-bar-blue">
+							<h2>Select Preferred Address</h2>
+						</div>
+					</div>
+					<div class="contactInfoList">
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+								<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+								<p>75 Crosstown Ave</p>
+								<p>West Roxbury, MA 02132</p>
+								<span class="right-icon heart-icon active"></span>
+							</div>
+						</div>
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+								<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+								<p>75 Crosstown Ave</p>
+								<p>West Roxbury, MA 02132</p>
+								<span class="right-icon heart-icon"></span>
+							</div>
+						</div>
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2><a href="#"><b>Christos Kyriakidis</b></a></h2>
+								<p><a href="mailto:poakchris@gmail.com">poakchris@gmail.com</a></p>
+								<p>75 Crosstown Ave</p>
+								<p>West Roxbury, MA 02132</p>
+								<span class="right-icon heart-icon"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="paymentMethod">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Payment Method</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="contactInfoHeader">
+						<div class="ui-bar ui-bar-white">
+							<h2>Add Credit Card <a href="#newCard"><span class="right plus-icon"></span></a></h2>
+						</div>
+						<div class="ui-bar ui-bar-blue">
+							<h2>Select Preferred Payment</h2>
+						</div>
+					</div>
+					<div class="contactInfoList">
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2>Visa: **** **** **** 1234</h2>
+								<h2>Exp: 07/16</h2>
+								<span class="right-icon heart-icon active"></span>
+							</div>
+						</div>
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2>Disc: **** **** **** 1234</h2>
+								<h2>Exp: 02/16</h2>
+								<span class="right-icon heart-icon"></span>
+							</div>
+						</div>
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2>AMEX: **** ****** 12345</h2>
+								<h2>Exp: 02/16</h2>
+								<span class="right-icon heart-icon"></span>
+							</div>
+						</div>
+						<div class="bar bar-default">
+							<div class="addressBar">
+								<h2>Master: **** **** **** 1234</h2>
+								<h2>Exp: 02/16</h2>
+								<span class="right-icon heart-icon"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed">
+				<div data-role="controlgroup" data-type="horizontal">
+				    <a href="#home" data-role="button" class="footer-home"></a>
+				    <a href="#howWorks" data-role="button" class="footer-search"></a>
+				    <a onclick = "basketredirect();" data-role="button" class="footer-cart"><span class="cart_value">0</span></a>
+				    <a href="#" data-role="button" class="footer-settings"></a>
+				</div>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="pickUp">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Pick Up</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="contactInfoHeader">
+						<div class="ui-bar ui-bar-white">
+							<h2><b>Dinner at City Hall Plaza</b></h2>
+							<h4><b>10am - 6:30pm</b></h4>
+						</div>
+						<div class="ui-bar ui-bar-blue">
+							<h2>Change Pick Up Time</h2>
+						</div>
+					</div>
+					<div class="pickUpBox">
+						<select name="pickUpTime" id="pickUpTime" data-mini="true">
+						   <option value="1">6:00 pm</option>
+						   <option value="1">8:00 pm</option>
+						   <option value="1">10:00 pm</option>
+						   <option value="1">11:30 pm</option>
+						</select>
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a onclick="gotoCheckout()" class="ui-btn full-btn">Save Selection</a>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="newCard">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">New Card</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="extraPaddingContent">
+					
+						<form role="form" class="defaultForm">
+							
+							<label>Select Card Type</label>
+							<fieldset data-mini="true" class="ui-grid-c selectCardType" id="cardType">
+								<div class="ui-block-a">
+									<a onclick="assing_value('Visa')" class="ui-btn visa-btn">visa</a>
+								</div>
+								<div class="ui-block-b">
+									<a onclick="assing_value('American Express')" class="ui-btn americanExpress-btn">americanExpress</a>
+								</div>
+								<div class="ui-block-c">
+									<a onclick="assing_value('Master')" class="ui-btn masterCard-btn">masterCard</a>
+								</div>
+								<div class="ui-block-d">
+									<a onclick="assing_value('Discover')" class="ui-btn discover-btn">discover</a>
+								</div>
+							</fieldset>
+							
+							<label for="nameOnCard">Name on Card</label>
+						    <input data-clear-btn="true" name="nameOnCard" id="nameOnCard" value="" type="text">
+						    
+						    <label for="cardNumber">Card Number</label>
+						    <input data-clear-btn="true" name="cardNumber" id="cardNumber" value="" type="text">
+						    
+						    
+						    <fieldset class="ui-grid-a">
+							    <div class="ui-block-a">
+							    	<label for="expMonth">Exp. Month</label>
+							    	<input type="text" name="expMonth" id="expMonth" value="">
+						    	</div>
+							    <div class="ui-block-b">
+							    	<label for="expYear">Exp. Year</label>
+							    	<input type="text" name="expYear" id="expYear" value="">
+						    	</div>
+							</fieldset>
+							
+							<fieldset class="ui-grid-a">
+							    <div class="ui-block-a">
+							    	<label for="CVVCode">CVV Code</label>
+							    	<input type="text" name="CVVCode" id="CVVCode" value="">
+						    	</div>
+							   <!--  <div class="ui-block-b">
+							    	<label for="ZIP">ZIP</label>
+							    	<input type="text" name="ZIP" id="ZIP" value="">
+						    	</div> -->
+							</fieldset>
+
+							<input type="hidden" name="card_Type" id="card_Type" value="">
+						</form>
+					</div>					
+
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a onclick="gotoCheckout();submit_card();" class="ui-btn full-btn">Add</a>
+			</footer><!-- /footer -->
+		</div>
+				
+		
+		<div data-role="page" id="newAddress">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">New Address</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="extraPaddingContent">
+					
+						<form role="form" class="defaultForm">
+														
+							<label for="Name">Name</label>
+						    <input data-clear-btn="true" name="Name" id="Name" value="" type="text">
+						    
+						    <label for="Address">Address</label>
+						    <input data-clear-btn="true" name="Address" id="Address" value="" type="text">
+						    
+						    <label for="City">City</label>
+						    <input data-clear-btn="true" name="City" id="City" value="" type="text">
+						    
+						    <fieldset class="ui-grid-a">
+							    <div class="ui-block-a">
+							    	<label for="ZIP">ZIP</label>
+							    	<input type="text" name="ZIP" id="ZIP" value="">
+						    	</div>
+							    <div class="ui-block-b">
+							    	<label for="Mobile">Mobile</label>
+							    	<input type="text" name="Mobile" id="Mobile" value="">
+						    	</div>
+							</fieldset>
+						    
+						    <label for="Email">Email</label>
+						    <input data-clear-btn="true" name="Email" id="Email" value="" type="email">
+						    
+						</form>
+					
+					</div>
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a onclick="gotoCheckout();" class="ui-btn full-btn">Add</a>
+			</footer><!-- /footer -->
+		</div>
+			
+		
+		<div data-role="page" id="addItem">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Food</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					
+					<div class="contactInfoHeader">					
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<h2><a class="ui-link" href="#">Smoked Salmon Crepe</a></h2>
+								<p>Nova lox salmon, red onion, cream cheese, caper mix</p>
+								<div class="right-small-box">
+									<h5>$8.00</h5>
+								</div>
+							</div>
+						</div>
+						<div class="ui-bar ui-bar-blue">
+							<h2>Item Options</h2>
+						</div>
+					</div>
+					<div class="listGroup">
+						<div class="bar bar-default">
+							<form method="post" action="">
+							    <div class="increase-btn">
+							        <label for="name">Quantity</label>
+							        <div class="right">
+								        <div class="dec button">-</div>
+								        <input type="text" name="french-hens" id="french-hens" value="1" data-theme="none" data-role="none">
+								        <div class="inc button">+</div>
+							        </div>
+							    </div>
+							</form>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Choice <small>Steak Tips</small></a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Extras <small>Lettuce, Tomato, Pickles, Onions</small></a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#specialInstructions" class="ui-link">Special Instructions <small>(additional charges may apply)</small></a>
+						</div>
+					</div>
+					
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#" class="ui-btn full-btn">Add to basket</a>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="specialInstructions">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Food</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					
+					<div class="contactInfoHeader">					
+						<div class="bar bar-default">
+							<div class="search-result-box">
+								<h2><a class="ui-link" href="#">Smoked Salmon Crepe</a></h2>
+								<p>Nova lox salmon, red onion, cream cheese, caper mix</p>
+								<div class="right-small-box">
+									<h5>$8.00</h5>
+								</div>
+							</div>
+						</div>
+						<div class="ui-bar ui-bar-blue">
+							<h2>Special Instructions</h2>
+						</div>
+					</div>
+					<div class="listGroup">
+						<div class="bar bar-default">
+							<label for="speInstruction">Enter special instructions here.</label>
+							<textarea name="speInstruction" id="speInstruction"></textarea>
+						</div>
+					</div>
+					
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a onclick="gotoCheckout();" class="ui-btn full-btn">Save</a>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="Basket">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Basket</a></h2>
+				<a href="#" data-rel="back" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+
+			<section data-role="content" id="basktRed" >
+				</section>
+
+			
+
+
+
+
+
+
+			
+			<!-- /content -->
+
+			<input type="hidden" clas="item_val_class" name="item_val" id="item_val" value="">
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#popupExample" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn full-btn" onclick="testIslogin()" >Proceed to checkout</a>
+			</footer><!-- /footer -->
+			<div data-role="popup" id="popupExample" data-theme="a" class="ui-corner-all">
+		        <div class="popUp">
+		            <h2>Benny’s Crepe Cafe</h2>
+		            <p>Please use same copy for all pop ups as website and this design for all pop ups</p>
+		        </div>
+		        <div class="popUpFooter">
+		        	<a href="#" data-rel="back" >OK</a>
+		        </div>
+			</div>
+		</div>
+		
+		
+		<div data-role="page" id="checkOut" class="top_header_style">
+			<header data-role="header" data-id="my-header" data-position="fixed" class="header_style">
+				<h2><a href="#" title="What The Trucks">Checkout</a></h2>
+				<a href="#Basket" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content" id="checkoutPage">
+				
+
+
+
+
+</section>
+
+
+
+                <!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#checkOut" onclick="success_alert();" class="ui-btn full-btn">Checkout</a>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="checkOutContact">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Checkout</a></h2>
+				<a href="#Basket" data-position="left" class="back-btn" data-theme="none" style="margin-top:10px;"></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn" style="margin-top:10px;"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="contactInfoHeader">		
+						<div class="headerTopBox">
+							<h2><a class="ui-link" href="#">Benny’s Crepe Cafe</a></h2>
+							<span class="icon-block location">Rings Fountain at Milk Street</span>
+							<div class="inline-icon">
+								<span class="icon-block time"><b>10am - 6:30pm</b></span>
+								<span class="icon-block order right"><b>Pickup: </b> 35 min</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="fullWidth">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+									<td><a href="#" class="delete"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right"><input type="text" data-role="none" class="tipBox"/></span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+						
+					</div>
+					
+					<div class="listGroup">
+						<div class="bar bar-default">
+							<a class="addressBar" href="#">
+								<h2><b>Christos Kyriakidis</b></h2>
+								<p>poakchris@gmail.com</p>
+								<p>75 Crosstown Ave</p>
+								<p>West Roxbury, MA 02132</p>
+							</a>
+						</div>
+						<div class="bar bar-default">
+							<a class="addressBar" href="#">
+								<p>Visa: **** **** **** 1234</p>
+								<p>Exp: 07/16</p>
+							</a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Change Pickup Time <span>1:30pm</span></a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Special Instructions</a>
+						</div>
+					</div>
+										
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#checkOut" class="ui-btn full-btn">Checkout</a>
+			</footer><!-- /footer -->
+		</div>
+		
+		
+		<div data-role="page" id="Confirmation">
+			<header data-role="header" data-id="my-header" data-position="fixed">
+				<h2><a href="#" title="What The Trucks">Confirmation</a></h2>
+				<a href="#Basket" data-position="left" class="back-btn" data-theme="none" ></a>
+				<a href="#mypanel" data-position="right" data-theme="none" class="menu-btn"></a>
+			</header><!-- /header -->
+			
+			<section data-role="content">
+				<div class="inner-content">
+					<div class="contactInfoHeader">		
+						<div class="headerTopBox">
+							<h2><a class="ui-link" href="#">Benny’s Crepe Cafe</a></h2>
+							<span>Rings Fountain at Milk Street</span>
+							<div class="inline-icon">
+								<span><b>Order:</b>123456</span>
+								<span class="right"><b>Pickup: </b> 35 min</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="fullWidth">
+						<table data-role="table" data-mode="columntoggle" class="ui-body-d ui-shadow table-stripe table-stroke ui-responsive" data-column-btn-theme="b" >
+							<thead>
+								<tr class="ui-bar-d ui-bar-blue">
+									<th>QTY</th>
+									<th>ITEM</th>
+									<th>PRICE</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+								</tr>
+								<tr>
+									<th>1</th>
+									<td>
+									<p class="split-text">
+										Guacamole Taco Combo <small> + Medium Salsa</small>
+									</p></td>
+									<td>$8.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="total">
+						<p>
+							<span class="left-label"><b>Subtotal:</b></span>
+							<span class="right">$16.00</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tax:</b></span>
+							<span class="right">$1.25</span>
+						</p>
+						<p>
+							<span class="left-label"><b>Tip:</b></span>
+							<span class="right">$2.00</span>
+						</p>
+						<p style="font-size: 15px;">
+							<span class="left-label"><b>Total:</b></span>
+							<span class="right" style="font-size: 15px;"><b>$17.25</b></span>
+						</p>
+						
+					</div>
+					
+					<div class="listGroup">
+						<div class="bar bar-default">
+							<a class="addressBar" href="#">
+								<h2><b>Christos Kyriakidis</b></h2>
+								<p>poakchris@gmail.com</p>
+								<p>75 Crosstown Ave</p>
+								<p>West Roxbury, MA 02132</p>
+							</a>
+						</div>
+						<div class="bar bar-default">
+							<a class="addressBar" href="#">
+								<p>Visa: **** **** **** 1234</p>
+								<p>Exp: 07/16</p>
+							</a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Change Pickup Time <span>1:30pm</span></a>
+						</div>
+						<div class="bar bar-default">
+							<a href="#" class="ui-link">Special Instructions</a>
+						</div>
+					</div>
+										
+				</div>
+			</section><!-- /content -->
+			<footer data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#checkOut" class="ui-btn full-btn">Checkout</a>
+			</footer><!-- /footer -->
+		</div>
+
+
+
+		
+		
+		
+		<aside data-role="panel" id="mypanel" data-position="right" data-display="push" data-position-fixed="true">
+		    <ul class="main-menu">
+		    	<li><a href="#home"><span class="menu-home"></span>Home</a></li>
+		    	<li><a href="#howWorks"><span class="menu-howitworks"></span>How It Works</a></li>
+		    	<li><a href="#settings"><span class="menu-settings"></span>Settings</a></li>
+		    	<li><a   onclick = "basketredirect();"><span class="menu-basket"></span>Basket<span class="busket_val" id ="countval">2</span class="busket_val"></a></li>
+		    	<li><a href="#termsOfUse"><span class="menu-terms"></span>Terms of Use</a></li>
+		    	<li><a href="#privacyPolicy"><span class="menu-privacy"></span>Privacy Policy</a></li>
+		    	<li><a href="#logIn"><span class="menu-signin"></span>Sign In</a></li>
+		    </ul>
+		</aside><!-- /panel -->
+		
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/retina.min.js"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+   
+        <script type="text/javascript" src="js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/GooglePlus.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/TwitterPlugin.js"></script>
+   			 <script type="text/javascript" charset="utf-8" src="js/demo.js"></script>
+   			 <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script> 
+        <script type="text/javascript">
+           
+
+
+    // For Facebook details
+		function seeAdreesa(){
+
+			document.getElementById('whereYou').value = street;
+			//alert(street);
+
+		}
+
+
+        function sendfacebookcnct(fname,lname,email){
+
+		$.ajax({
+	        type: "POST",
+	        url: "http://esolzdemos.com/lab1/whatthetrucks/facebookcoonecnt.php",
+	        data: "fname="+fname+"&lname="+lname+"&email="+email,
+	        cache: false,
+	                success: function(html){
+
+                        var date = new Date();
+                        var minutes = 30;
+                         date.setTime(date.getTime() + (minutes * 60 * 1000));
+                        $.cookie("islogin", "yes", { expires: date });
+                        
+	                //alert(fname+'.......'+lname+'......'+email);
+	                //alert(html);
+
+	                }
+	        });
+
+		}
+
+
+var login = function () {
+	
+                if (!window.cordova) {
+
+                    var appId = prompt("899987186706780", "");
+                    facebookConnectPlugin.browserInit(appId);
+                }
+                facebookConnectPlugin.login( ["email"], 
+                    function (response) {  },
+                    function (response) {  });
+                facebookConnectPlugin.api("me/", [], function(result) {
+            //alert("Result: " + JSON.stringify(result));
+            var res = JSON.stringify(result);
+            var responseData = JSON.parse(res);
+         
+            sendfacebookcnct(responseData.first_name,responseData.last_name,responseData.email);
+
+
+
+            facebookConnectPlugin.logout(function(response) {
+            //alert(response);
+             }, function(error) {
+            //alert("Logout failed: " + error);
+            });
+             }, function(error) {
+              //alert("Failed: " + error);
+         });
+            }
+           
+            var showDialog = function () { 
+                facebookConnectPlugin.showDialog( { method: "feed" }, 
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+                    
+            }
+            
+            var apiTest = function () { 
+                facebookConnectPlugin.api( "me/?fields=id,email", ["user_birthday"],
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+                    
+            }
+
+            var logPurchase = function () {
+                facebookConnectPlugin.logPurchase(1.99, "USD",
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+            }
+
+            var logEvent = function () {
+                // For more information on AppEvent param structure see
+                // https://developers.facebook.com/docs/ios/app-events
+                // https://developers.facebook.com/docs/android/app-events
+                facebookConnectPlugin.logEvent("Purchased",
+                    {
+                        NumItems: 1,
+                        Currency: "USD",
+                        ContentType: "shoes",
+                        ContentID: "HDFU-8452"
+                    }, null,
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+            }
+
+            var getAccessToken = function () { 
+                facebookConnectPlugin.getAccessToken( 
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+            }
+            
+            var getStatus = function () { 
+                facebookConnectPlugin.getLoginStatus( 
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+            }
+
+            var logout = function () { 
+                facebookConnectPlugin.logout( 
+                    function (response) { alert(JSON.stringify(response)) },
+                    function (response) { alert(JSON.stringify(response)) });
+            }
+
+
+
+
+
+
+
+
+    //
+
+            
+            ///ajax pages
+
+            function testIslogin(){
+                     if($.cookie("islogin") === "yes"){
+
+                            $.mobile.changePage("#checkOut");
+                            $("#checkoutPage").fadeOut(500,function(){
+                 $(this).html('<img src="img/loader.GIF"  style="left:50%;top:50%;position:relative;margin-left:-16px;margin-top:200px;width:32px;height:25px;" >');
+                $(this).show("fast");
+                });
+            
+        
+                $.ajax({
+            type: "POST",
+            url: "http://esolzdemos.com/lab1/whatthetrucks/checkout.php",
+            data: "string="+$.cookie("prevsName"),
+            cache: false,
+                    success: function(html){
+                    var allval=html;
+                   
+                     $('#checkoutPage').fadeOut(500,function(){
+                         $(this).html(allval);
+                         $(this).fadeIn(500);
+                        $('.delete').click(function() {
+                                    $(this).parent().parent().remove();
+                            });
+                     });
+                    }
+            });
+
+
+                        }else{
+                                $.mobile.changePage("#logIn");
+
+                        }
+
+            }
+            
+        function storeVal(){
+
+        	var quty = $("#Quantity").val();
+        	var radio = $("input[name=Saucerd]:checked").val();
+        	var descprtn = $("#descprtn").val();
+        	var foodname = $.cookie("foodname");
+        	var pricevaln = $.cookie("priceval");
+
+               // if($.cookie("islogin") === "yes"){
+                    if (typeof $.cookie("count") === "undefined")
+                    {
+                    $.cookie("count", 1);
+                    }else{
+                    $.cookie("count", parseInt($.cookie("count"))+1);
+                    }
+                    //alert(parseInt($.cookie("count")));
+                    $("#countval").val = parseInt($.cookie("count"));
+                    $(".footer-cart .cart_value").text(parseInt($.cookie("count")));
+
+                //}
+
+
+			if (typeof $.cookie("prevsName") === "undefined") {
+   				var string = quty+"##"+radio+"##"+descprtn+"##"+foodname+"##"+pricevaln+"=====";
+			}else{
+
+				var string = $.cookie("prevsName")+quty+"##"+radio+"##"+descprtn+"##"+foodname+"##"+pricevaln+"=====";
+			}
+        	
+        	$.cookie("prevsName", string);
+
+
+        }	
+
+        function savename(name,priceval){
+
+        	
+        		$(".show_itemname").text(name);
+        		$(".item_val_class").val(name);
+        		$.cookie("priceval", priceval);
+				$.cookie("foodname", name);
+
+        }
+
+        function basketredirect (){
+
+				$.mobile.changePage("#Basket");
+
+				 var itemval=$( "#item_val" ).val();
+				 alert(itemval);
+
+				$("#basktRed").fadeOut(500,function(){
+				 $(this).html('<img src="img/loader.GIF"  style="left:50%;top:50%;position:relative;margin-left:-16px;margin-top:200px;width:32px;height:25px;" >');
+			 	$(this).show("fast");
+				});
+			
+		
+		$.ajax({
+	        type: "POST",
+	        url: "http://esolzdemos.com/lab1/whatthetrucks/basketpage.php",
+	        data: "string="+$.cookie("prevsName"),
+	        cache: false,
+	                success: function(html){
+	                var allval=html;
+	               
+					 $('#basktRed').fadeOut(500,function(){
+						 $(this).html(allval);
+						 $(this).fadeIn(500);
+						$('.delete').click(function() {
+									$(this).parent().parent().remove();
+							});
+					 });
+	                }
+	        });
+
+
+// Code to add
+
+
+        }
+
+
+        function searchResult(lat,longt,keyword){
+
+        	 $.mobile.changePage("#searchResult");
+		
+		$("#searchrslt").fadeOut(500,function(){
+			 $(this).html('<img src="img/loader.GIF"  style="left:50%;top:50%;position:relative;margin-left:-16px;margin-top:200px;width:32px;height:25px;" >');
+			 $(this).show("fast");
+		});
+			
+		
+		$.ajax({
+	        type: "POST",
+	        url: "http://esolzdemos.com/lab1/whatthetrucks/searchresult.php",
+	        data: "lat="+lat+"&longt="+longt+"&keywrd="+keyword,
+	        cache: false,
+	                success: function(html){
+	                var allval=html;
+	               
+					 $('#searchrslt').fadeOut(500,function(){
+						 $(this).html(allval);
+						 $(this).fadeIn(500);
+
+						 			$('.right-small-box').click(function() {
+										$(this).parent().parent().find(".collapsed-schedule").slideToggle();
+									});
+						
+					 });
+	                }
+	        });
+		
+		
+		
+	}
+
+
+	function gotoDetailsRes(idv,lat,longt,busid){
+
+		
+
+	 	$.mobile.changePage("#truckDetails");
+	
+
+	 $("#searchrsltDetls").fadeOut(500,function(){
+			 $(this).html('<img src="img/loader.GIF"  style="left:50%;top:50%;position:relative;margin-left:-16px;margin-top:200px;width:32px;height:25px;" >');
+			 $(this).show("fast");
+		});
+			
+		geocoder = new google.maps.Geocoder();
+		var address = document.getElementById("whereYou").value;
+	    var keyword = document.getElementById("foodTruckName").value;
+
+	    //alert(address);
+	                  
+		$('#adreesval1').html("<h2 >"+address+"</h2>");
+
+		$.ajax({
+	        type: "POST",
+	        url: "http://esolzdemos.com/lab1/whatthetrucks/searchdetails.php",
+	        data: "lat="+lat+"&longt="+longt+"&id="+idv+"&busid="+busid,
+	        cache: false,
+	                success: function(html){
+	                var allval=html;
+	               
+					 $('#searchrsltDetls').fadeOut(500,function(){
+						 $(this).html(allval);
+						 $(this).fadeIn(500);
+
+						 		$('.right-small-box').click(function() {
+										$(this).parent().parent().find(".collapsed-schedule").slideToggle();
+									});	
+						
+					 });
+	                }
+	        });
+	}
+
+
+
+			app.initialize();
+
+
+//Google plus login
+
+
+function logingoogle() {
+    window.plugins.googleplus.login(
+        {
+          'iOSApiKey': '1008791507678-ec8chuj2lkbqo2vo7ejvj9ri7t8870gd.apps.googleusercontent.com'
+        },
+        function (obj) {
+
+        	//alert(obj.imageUrl +"Hi, " + obj.displayName + ", " + obj.email);
+          // document.querySelector("#image").src = obj.imageUrl;
+          // document.querySelector("#image").style.visibility = 'visible';
+          // document.querySelector("#feedback").innerHTML = "Hi, " + obj.displayName + ", " + obj.email;
+        },
+        function (msg) {
+          //document.querySelector("#feedback").innerHTML = "error: " + msg;
+        }
+    );
+  }
+
+  function trySilentLogin() {
+    window.plugins.googleplus.trySilentLogin(
+        {
+          'iOSApiKey': '1008791507678-ec8chuj2lkbqo2vo7ejvj9ri7t8870gd.apps.googleusercontent.com'
+        },
+        function (obj) {
+          // document.querySelector("#image").src = obj.imageUrl;
+          // document.querySelector("#image").style.visibility = 'visible';
+          // document.querySelector("#feedback").innerHTML = "Silent hi, " + obj.displayName + ", " + obj.email;
+        },
+        function (msg) {
+          //document.querySelector("#feedback").innerHTML = "error: " + msg;
+        }
+    );
+  }
+
+  function logoutgoogle() {
+    window.plugins.googleplus.logout(
+        function (msg) {
+          // document.querySelector("#image").style.visibility = 'hidden';
+          // document.querySelector("#feedback").innerHTML = msg;
+        }
+    );
+  }
+
+  function disconnect() {
+    window.plugins.googleplus.disconnect(
+        function (msg) {
+          // document.querySelector("#image").style.visibility = 'hidden';
+          // document.querySelector("#feedback").innerHTML = msg;
+        }
+    );
+  }
+
+  window.onerror = function(what, line, file) {
+    alert(what + '; ' + line + '; ' + file);
+  };
+
+  function handleOpenURL (url) {
+    //document.querySelector("#feedback").innerHTML = "App was opened by URL: " + url;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//jquery for design
+			
+			$('#submit-btn').click(function() {
+				    geocoder = new google.maps.Geocoder();
+   					 var address = document.getElementById("whereYou").value;
+                    var keyword = document.getElementById("foodTruckName").value;
+                                  
+   					 $('#adreesval').html("<h2 >"+address+"</h2>");
+    				geocoder.geocode( { 'address': address}, function(results, status) {
+      				if (status == google.maps.GeocoderStatus.OK) {
+
+      						searchResult(results[0].geometry.location.lat(),results[0].geometry.location.lng(),keyword);
+     				 } 
+
+     				 else {
+       					 alert("Geocode was not successful for the following reason: " + status);
+     			 }
+   			 });
+    				
+				//$.mobile.changePage("#searchResult");
+			});
+			
+			// $('.right-small-box').click(function() {
+			// 	$(this).parent().parent().find(".collapsed-schedule").slideToggle();
+			// });
+			
+			$(".contactInfoList .addressBar").click(function(){
+			  if ($(this).find(".heart-icon").is(".active")) {
+			   		$(this).removeClass("active");
+			  }
+			  else {
+			   	$(".contactInfoList .bar .heart-icon").removeClass("active");
+			   	$(this).find(".heart-icon").addClass("active");
+			  }
+		 	});
+		 	
+		 	$("#cardType .ui-btn").click(function(){
+			  if ($(this).is(".active")) {
+			   		$(this).removeClass("active");
+			  }
+			  else {
+			   	$("#cardType .ui-btn").removeClass("active");
+			   	$(this).addClass("active");
+			  }
+		 	});
+		 	
+		 	
+		 		 	
+		 	$(".button").on("click", function() {
+			  var $button = $(this);
+			  var oldValue = $button.parent().find("input").val();
+			
+			  if ($button.text() == "+") {
+				  var newVal = parseFloat(oldValue) + 1;
+				} else {
+			   // Don't allow decrementing below zero
+			    if (oldValue > 0) {
+			      var newVal = parseFloat(oldValue) - 1;
+			    } else {
+			      newVal = 0;
+			    }
+			  }
+			
+			  $button.parent().find("input").val(newVal);
+			
+			});
+			
+			
+			$('.delete').click(function() {
+				$(this).parent().parent().remove();
+			});
+			
+			
+			$(function() {
+				$( "body>[data-role='panel']" ).panel();
+			});
+			
+			
+
+			function submit_card(){
+
+				var cardtype=$("#card_Type").val();
+				var cardname=$("#nameOnCard").val();
+				var cardNumber=$("#cardNumber").val();
+				var expMonth=$("#expMonth").val();
+				var expYear=$("#expYear").val();
+				var CVVCode=$("#CVVCode").val();
+
+
+				$.ajax({
+		        type: "POST",
+		        url: "http://esolzdemos.com/lab1/whatthetrucks/CustomerPaymet.php",
+		        data: "cardtype="+cardtype+"&cardname="+cardname+"&cardNumber="+cardNumber+"&expMonth="+expMonth+"&expYear="+expYear+"&CVVCode="+CVVCode,
+		        cache: false,
+		                success: function(html){
+
+		                	//alert("hiiii");
+
+		                	//alert(html);
+
+	                 //        var date = new Date();
+	                 //        var minutes = 30;
+	                 //         date.setTime(date.getTime() + (minutes * 60 * 1000));
+	                 //        $.cookie("islogin", "yes", { expires: date });
+	                        
+		                // alert(fname+'.......'+lname+'......'+email);
+		                // alert(html);
+
+		                }
+		        });
+				
+				
+
+			}
+			
+			function assing_value(value)
+			{
+				
+				$("#card_Type").val(value);
+			}
+
+			function search_del()
+			{
+				//alert("hiiii");
+				
+				$.mobile.changePage("#truckDetails");
+			}
+
+			function gotoCheckout()
+			{
+				//alert("hiiii");
+				$.mobile.changePage("#checkOut");
+				
+			}
+
+			function success_alert()
+			{
+				alert("Successfully checked out");
+			}
+
+
+        </script>
+        
+        
+        
+    </body>
+</html>

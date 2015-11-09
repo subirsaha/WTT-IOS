@@ -1,0 +1,17 @@
+formatphoneonout
+
+
+showtime_pickup
+
+$.cookie("pickuptm")
+
+$.cookie("showtime")
+
+
+
+var pageid=$.mobile.activePage.attr('id');
+                                            //document.getElementById('popup'+pageid).innerHTML="Name is mandatory";
+                                            document.getElementById('alertbtnadd'+pageid).click(); 
+
+                                            document.getElementById('homepagebtn').href="#"+$.mobile.activePage.attr('id')
+                document.getElementById('homepagebtn').click();

@@ -1,0 +1,22 @@
+<label for="Name">Name</label>
+						    <input data-clear-btn="true" name="Name" id="Name" value="" type="text">
+						    
+						    <label for="Address">Address</label>
+						    <input data-clear-btn="true" name="Address" id="Address" value="" type="text">
+						    
+						    <label for="City">City</label>
+						    <input data-clear-btn="true" name="City" id="City" value="" type="text">
+						    
+						    <fieldset class="ui-grid-a">
+							    <div class="ui-block-a">
+							    	<label for="ZIP">ZIP</label>
+							    	<input type="text" name="ZIP" id="ZIP" value="">
+						    	</div>
+							    <div class="ui-block-b">
+							    	<label for="Mobile">Mobile</label>
+							    	<input type="text" name="Mobile" id="Mobile" value="">
+						    	</div>
+							</fieldset>
+						    
+						    <label for="Email">Email</label>
+						    <input data-clear-btn="true" name="Email" id="Email" value="" type="email">
